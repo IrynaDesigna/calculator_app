@@ -8,13 +8,8 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-### Links
-
 - Solution URL: [Add solution URL here](https://github.com/Web-Designa/calculator_app)
-- Live Site URL: [Add live site URL here](https://github.com/Web-Designa/calculator_app/)
+- Live Site URL: [Add live site URL here](https://web-designa.github.io/calculator_app/)
 
 ### Built with
 
