@@ -1,0 +1,5 @@
+# ignore everything in folder "design"
+design/
+node_modules/
+
+style-guide.md

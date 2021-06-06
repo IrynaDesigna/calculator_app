@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap')
+@import "vars"
+@import "mixins"
+
+.attribution
+  font-size: 8px
+  text-align: center
+  text-transform: uppercase
+  margin: 10px 0
+  a
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+*
+  margin: 0
+  padding: 0
+
+body
+  @include flex
+  flex-direction: column
+  width: 100%
+  font-family: $font
+  user-select: none
+  min-height: 100vh
+
+.calculator-box
+  margin-top: 15px
+  width: 540px
+  @media (max-width: 640px)
+    width: 330px
+
+.header
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  font-size: 28px
+
+.themes
+  font-size: 10px
+  align-items: flex-end
+  p
+    text-transform: uppercase
+    margin: 0 20px 7px 0
+
+.themes, .themes-conteiner
+  display: flex
+
+.themes-conteiner
+  width: 70px
+  height: 26px
+  border-radius: 13px
+  padding: 5px
+  box-sizing: border-box
+  @include flex(space-between, center)
+
+.theme
+  position: relative
+  label
+    position: absolute
+    left: 3px
+    top: -20px
+  input
+    cursor: pointer
+    opacity: 0
+    position: relative
+    &:checked ~ .checkmark
+      cursor: pointer
+      position: absolute
+      top: 0
+      left: 0
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      &.checkmark-three
+        left: auto
+        right: 0
+
+
+.calc-screen
+  width: 100%
+  border-radius: $radius
+  margin: 2.5rem 0 1.5rem
+  height: 128px
+  padding: 36px
+  box-sizing: border-box
+  font-size: 2.5rem
+  text-align: right
+  overflow: overlay
+  @media (max-width: 640px)
+    margin: 32px 0 24px
+
+.calculator
+  width: 100%
+  @include flex(space-between, center)
+  flex-wrap: wrap
+  border-radius: $radius
+  padding: 18px 22px
+  box-sizing: border-box
+  @media (max-width: 640px)
+    padding: 17px
+  & .btn
+    display: inline-block
+    width: 100px
+    height: 60px
+    border-radius: $radius
+    display: grid
+    place-content: center
+    margin: 12px
+    font-size: 28px
+    box-sizing: border-box
+    padding-top: 10px
+    @media (max-width: 640px)
+      width: 60px
+      height: 60px
+      margin: 7px
+    &.reset, &.result
+      width: 224px
+      @media (max-width: 640px)
+        width: 134px
+    &.del, &.reset, &.result
+      font-size: 20px
+      text-transform: uppercase
+
+
+.theme-one
+  background: $bg-blue
+  .attribution
+    color: $light-grey
+    & a
+      color: $dark-blue
+      &:hover
+        color: $light-blue
+  .themes-conteiner
+    background: $blue
+  .theme input:checked ~ .checkmark
+    background-color: $red
+  .calculator-box
+    color: #fff
+    & .calc-screen
+      background: $dark-blue
+    & .calculator
+      background: $blue
+      & .btn
+        @include shadow(4px,$grey-shadow)
+        background: $light-grey
+        color: $bg-blue
+        &:hover, &:active
+          @include shadow(-4px,$grey-shadow)
+          transform: translateY(4px)
+          &.reset, &.result
+            @include shadow(-4px,$blue-shadow)
+          &.del
+            @include shadow(-4px,$red-shadow)
+        &.del, &.reset, &.result
+          color: #fff
+        &.reset, &.result
+          background: $light-blue
+          @include shadow(4px,$blue-shadow)
+        &.del
+          background: $red
+          @include shadow(4px,$red-shadow)
+
+
+.theme-two
+  background: $bg-grey
+  .attribution
+    color: $dark-grey
+    & a
+      color: $green
+      &:hover
+        color: $green-shadow
+  .themes-conteiner
+    background: $grey
+  .theme input:checked ~ .checkmark
+    background-color: $orange
+  .calculator-box
+    color: $dark-grey
+    & .calc-screen
+      background: #eee
+    & .calculator
+      background: $grey
+      & .btn
+        @include shadow(4px,$grey-shadow)
+        background: $light-grey
+        &:hover, &:active
+          @include shadow(-4px,$grey-shadow)
+          transform: translateY(4px)
+          &.reset, &.del
+            @include shadow(-4px,$green-shadow)
+          &.result
+            @include shadow(-4px,$orange-shadow)
+        &.del, &.reset, &.result
+          color: #fff
+        &.reset, &.del
+          background: $green
+          @include shadow(4px,$green-shadow)
+        &.result
+          background: $orange
+          @include shadow(4px,$orange-shadow)
+
+.theme-three
+  background: $bg-navy
+  .attribution
+    color: $light-grey
+    & a
+      color: $green
+      &:hover
+        color: $green-shadow
+  .themes-conteiner
+    background: $navy
+  .theme input:checked ~ .checkmark
+    background-color: $lime
+  .calculator-box
+    color: $yellow
+    & .calc-screen
+      background: $navy
+    & .calculator
+      background: $navy
+      & .btn
+        @include shadow(4px,$purple-shadow)
+        background: $purple-btn
+        &:hover, &:active
+          @include shadow(-4px,$purple-shadow)
+          transform: translateY(4px)
+          &.reset, &.del
+            @include shadow(-4px,$light-puple-shadow)
+          &.result
+            @include shadow(-4px,$lime-shadow)
+        &.del, &.reset
+          color: #fff
+        &.reset, &.del
+          background: $light-purple
+          @include shadow(4px,$light-puple-shadow)
+        &.result
+          color: #000
+          background: $lime
+          @include shadow(4px,$lime-shadow)

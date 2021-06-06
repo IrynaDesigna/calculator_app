@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body id="body" class="theme-one">
+
+  <div class="calculator-box">
+    <div class="header">
+      <p>calc</p>
+      <div class="themes">
+        <p>Themes</p>
+        <div class="themes-conteiner">
+          <div class="theme">
+            <label for="one">1</label>
+            <div class="theme-check">
+              <input type="radio" value="one" id="theme-one" name="theme" checked></input>
+              <span class="checkmark"></span>
+            </div>
+          </div>
+          <div class="theme">
+            <label for="two">2</label>
+            <div class="theme-check">
+              <input type="radio" value="two" id="theme-two" name="theme"></input>
+              <span class="checkmark"></span>
+            </div>
+          </div>
+          <div class="theme">
+            <label for="three">3</label>
+            <div class="theme-check">
+              <input type="radio" value="three" id="theme-three" name="theme"></input>
+              <span class="checkmark checkmark-three"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-screen" id="screen"><span>0</span></div>
+
+    <div class="calculator">
+        <span class="btn number">7</span>
+        <span class="btn number">8</span>
+        <span class="btn number">9</span>
+        <span class="btn del" id="del">Del</span>
+        <span class="btn number">4</span>
+        <span class="btn number">5</span>
+        <span class="btn number">6</span>
+        <span class="btn" id="plus">+</span>
+        <span class="btn number">1</span>
+        <span class="btn number">2</span>
+        <span class="btn number">3</span>
+        <span class="btn" id="minus">-</span>
+        <span class="btn number" id="dot">.</span>
+        <span class="btn number">0</span>
+        <span class="btn" id="divide">/</span>
+        <span class="btn" id="multiply">x</span>
+        <span class="btn reset" id="reset">Reset</span>
+        <span class="btn result" id="result">=</span>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/Web-Designa/">Iryna</a>.
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
