@@ -26,7 +26,8 @@ let calcScreen = document.getElementById('screen'),
     numbers = document.getElementsByClassName('number'),
     shownNum = "",
     equation,
-    firstNum;
+    firstNum,
+    result = 0;
 
 //перебераеи массив из элементов с классом number
 for (var index in numbers) {
@@ -83,16 +84,27 @@ function getMath(action) {
 
 document.getElementById('result').onclick = function () {getResult()};
 function getResult() {
-  let result;
-  if (equation.match(new RegExp(/\+/g)) ) {
+  if (equation === result.toString()) {
+    cleanUp();
+  } else if (equation.match(new RegExp(/\+/g)) ) {
       result = parseFloat(firstNum) + parseFloat(shownNum);
+      showResult();
     } else if (equation.match(new RegExp(/\-/g))) {
       result = parseFloat(firstNum) - parseFloat(shownNum);
+      showResult();
     } else if (equation.match(new RegExp(/\*/g))) {
       result = parseFloat(firstNum) * parseFloat(shownNum);
+      showResult();
     } else if (equation.match(new RegExp(/\%/g))) {
       result = parseFloat(firstNum) / parseFloat(shownNum);
+      showResult();
     }
+    return result
+}
+
+function showResult() {
   shownNum = result;
   calcScreen.innerHTML = result;
+  equation = result.toString();
+  console.log(equation);
 }
