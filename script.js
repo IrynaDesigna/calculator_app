@@ -76,8 +76,6 @@ function getMath(action) {
   }
   firstNum = shownNum;
   equation = firstNum + " " + action;
-  console.log(action);
-  console.log(parseFloat(firstNum));
   cleanUp();
   calcScreen.innerHTML = firstNum;
 }
@@ -106,5 +104,4 @@ function showResult() {
   shownNum = result;
   calcScreen.innerHTML = result;
   equation = result.toString();
-  console.log(equation);
 }
