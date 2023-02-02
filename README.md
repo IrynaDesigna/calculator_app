@@ -1,4 +1,4 @@
-# Frontend Mentor - Calculator app solution
+#Calculator app
 
 This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -8,8 +8,8 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/IrynaDesigna/calculator_app)
-- Live Site URL: [Add live site URL here](https://IrynaDesigna.github.io/calculator_app/)
+- [Solution URL: ](https://github.com/IrynaDesigna/calculator_app)
+- [Live Site URL: ](https://IrynaDesigna.github.io/calculator_app/)
 
 ### Built with
 
